@@ -67,11 +67,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 12, ../sass/screen.scss */
-nav a {
-  color: #bada55;
+/* line 11, ../sass/screen.scss */
+nav {
+  display: inline;
+  float: left;
 }
-/* line 14, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
+nav a {
+  text-decoration: none;
+  color: #bada55;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: color 0.5s ease-in;
+  -moz-transition: color 0.5s ease-in;
+  -o-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
+}
+/* line 19, ../sass/screen.scss */
 nav a:hover {
-  color: #a8cf2d;
+  color: #a7c44c;
+}
+
+/* line 25, ../sass/screen.scss */
+.module {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+  width: 300px;
+  margin-bottom: 20px;
 }

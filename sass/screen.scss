@@ -9,10 +9,21 @@
 $my_color: #BADA55;
 
 nav {
+	@include float-left;
 	a{
+		text-decoration:none;
 		color: $my_color;
+		@include inline-block;
+		@include text-shadow(0 1px 1px rgba(#000, 0.3));
+		@include single-transition(color, 0.5s, ease-in);
 		&:hover {
-			color: darken($my_color, 10%);
+			color: shade($my_color, 10%);
 		}
 	}	
+}
+
+.module {
+	@include column-count(2);
+	width:300px;
+	margin-bottom:20px;
 }
